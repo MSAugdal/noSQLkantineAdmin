@@ -11,20 +11,30 @@
 
 <body>
   <div id="app" class="h-lvh">
-    <header class="absolute bg-gray-800 grid grid-cols-4 place-items-center w-lvw h-20">
+    <nav class="absolute bg-gray-800 grid grid-cols-4 place-items-center w-lvw h-20">
       <img src="public/vite.svg" alt="logo for kantine">
+      <p class="text-2xl text-white col-span-2 text-center">Admin</p>
       <a href="https://breivang.vgs.no/"
         class="col-start-4 rounded bg-gray-600 px-4 py-2 text-white transition hover:bg-purple-400 hover:scale-105 hover:shadow-[5px_5px_0px_0px_rgba(109,40,217)]">Finn
         oss</a>
-    </header>
-    <main class="grid grid-rows-3 grid-cols-[0.5fr_1fr_0.5fr_1fr_0.5fr] place-items-start h-lvh">
-      <div class="row-start-2 col-start-2 grid grid-rows-[3rem_1fr] px-8 py-8">
-        <h1 class="font-light text-3xl">Ukens varmmat</h1>
-        <div id="varmmeny" class="grid grid-cols-1 gap-2"></div>
+    </nav>
+    <main class="grid grid-rows-3 grid-cols-4 place-items-start h-lvh">
+      <div class="bg-gray-100 mt-20 h-36 w-lvw grid place-items-center">
+        <h1>Let's edit</h1>
+        <form action="">
+          <label for="rett">Rett</label>
+          <input name="rett" id="rett" placeholder="Write..." type="text">
+          <label for="pris">Pris</label>
+          <input name="pris" id="pris" placeholder="Write..." type="text">
+        </form>
       </div>
-      <div class="row-start-2 col-start-4 grid grid-rows-[3rem_1fr] px-8 py-8">
+      <div class="row-start-2 col-start-2 grid grid-rows-[3rem_1fr] place-items-center px-8 py-8">
+        <h1 class="font-light text-3xl">Ukens varmmat</h1>
+        <div id="varmmeny" class="grid grid-cols-1 gap-2 place-items-center"></div>
+      </div>
+      <div class="row-start-2 col-start-3 grid grid-rows-[3rem_1fr] place-items-center px-8 py-8">
         <h1 class="font-light text-3xl">Normal meny</h1>
-        <div id="normalmeny" class="grid gap-2"></div>
+        <div id="normalmeny" class="grid gap-2 place-items-center"></div>
       </div>
     </main>
   </div>
