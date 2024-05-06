@@ -566,20 +566,16 @@ video {
   grid-column-start: 2;
 }
 
-.col-start-4 {
-  grid-column-start: 4;
-}
-
 .col-start-3 {
   grid-column-start: 3;
 }
 
-.row-start-2 {
-  grid-row-start: 2;
+.col-start-4 {
+  grid-column-start: 4;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
+.row-start-2 {
+  grid-row-start: 2;
 }
 
 .mt-20 {
@@ -594,24 +590,12 @@ video {
   height: 5rem;
 }
 
-.h-lvh {
-  height: 100lvh;
-}
-
-.h-64 {
-  height: 16rem;
-}
-
-.h-48 {
-  height: 12rem;
-}
-
-.h-24 {
-  height: 6rem;
-}
-
 .h-36 {
   height: 9rem;
+}
+
+.h-lvh {
+  height: 100lvh;
 }
 
 .w-72 {
@@ -630,16 +614,8 @@ video {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.grid-cols-\[0\.5fr_1fr_0\.5fr_1fr_0\.5fr\] {
-  grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr;
-}
-
 .grid-cols-\[1fr_0\.5fr\] {
   grid-template-columns: 1fr 0.5fr;
-}
-
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -658,10 +634,6 @@ video {
   place-items: start;
 }
 
-.place-items-end {
-  place-items: end;
-}
-
 .place-items-center {
   place-items: center;
 }
@@ -674,6 +646,11 @@ video {
   border-radius: 0.25rem;
 }
 
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .bg-gray-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
@@ -682,26 +659,6 @@ video {
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-}
-
-.bg-purple-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
-}
-
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .px-4 {
@@ -733,14 +690,14 @@ video {
   text-align: center;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-light {
