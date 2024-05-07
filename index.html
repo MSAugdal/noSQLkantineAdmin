@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <script>var exports = {};</script>
   <div id="app" class="h-lvh">
     <nav class="absolute bg-gray-800 grid grid-cols-4 place-items-center w-lvw h-20">
       <img src="/vite.svg" alt="logo for kantine">
@@ -19,22 +18,40 @@
         class="col-start-4 rounded bg-gray-600 px-4 py-2 text-white transition hover:bg-purple-400 hover:scale-105 hover:shadow-[5px_5px_0px_0px_rgba(109,40,217)]">Finn
         oss</a>
     </nav>
-    <main class="grid grid-rows-3 grid-cols-4 place-items-start h-lvh">
-      <div class="bg-gray-100 mt-20 h-36 w-lvw grid place-items-center">
-        <h1>Let's edit</h1>
-        <form action="">
-          <label for="rett">Rett</label>
-          <input name="rett" id="rett" placeholder="Navn på rett..." type="text">
-          <label for="pris">Pris</label>
-          <input name="pris" id="pris" placeholder="Pris på rett..." type="text">
+    <main class=" grid grid-rows-3 grid-cols-[.8fr_1fr_1fr] place-items-center h-lvh font-light">
+      <div class="col-start-1 row-span-3 bg-gray-200 mt-2 h-lvh w-[100%] grid place-items-center">
+        <form action="" class="grid grid-rows-6 grid-cols-1 place-items-start mx-auto gap-6">
+          <h1 class="col-start-2 text-2xl font-light">Legg til vare</h1>
+          <div class="flex flex-col col-start-2">
+            <label for="rett" class="text-xl">Rett</label>
+            <input required name="rett" id="rett" placeholder="Navn på rett..." type="text" class="px-4 py-2 rounded">
+          </div>
+          <div class="flex flex-col col-start-2">
+            <label for="pris" class="text-xl">Pris</label>
+            <input required name="pris" id="pris" placeholder="Pris på rett..." type="number" class="px-4 py-2 rounded">
+          </div>
+          <div class="flex flex-col col-start-2">
+            <label for="allergen" class="text-xl">Allergen</label>
+            <input required name="allergen" id="allergen" placeholder="Allergener for rett..." type="text"
+              class="px-4 py-2 rounded">
+          </div>
+          <div class="flex flex-col col-start-2">
+            <label for="document-select" class="text-xl">Meny</label>
+            <select id="document-select" name="document-select" class=" px-4 py-2 bg-white rounded">
+              <option value="ukesMeny">Ukesmeny</option>
+              <option value="standardVarer">Standardvarer</option>
+            </select>
+          </div>
+          <input type="submit" id="submit" value="Submit"
+            class="col-start-2 w-[100%] rounded bg-gray-400 px-8 py-2 text-white transition hover:transition hover:scale-105 hover:bg-purple-400 hover:shadow-[5px_5px_0px_0px_rgba(109,40,217)]">
         </form>
       </div>
       <div class="row-start-2 col-start-2 grid grid-rows-[3rem_1fr] place-items-center px-8 py-8">
-        <h1 class="font-light text-3xl">Ukens varmmat</h1>
+        <h1 class="font-light text-2xl">Ukens varmmat</h1>
         <div id="varmmeny" class="grid grid-cols-1 gap-2 place-items-center"></div>
       </div>
       <div class="row-start-2 col-start-3 grid grid-rows-[3rem_1fr] place-items-center px-8 py-8">
-        <h1 class="font-light text-3xl">Normal meny</h1>
+        <h1 class="font-light text-2xl">Normal meny</h1>
         <div id="normalmeny" class="grid gap-2 place-items-center"></div>
       </div>
     </main>

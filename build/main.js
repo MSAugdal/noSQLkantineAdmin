@@ -3,6 +3,33 @@ const normal = document.querySelector("#normalmeny");
 const ukes = document.querySelector("#varmmeny");
 const standardVarer = await getStandardVarer();
 const ukesMeny = await getUkesMeny();
+const form = document.querySelector("form") ?? undefined;
+const submitBtn = document.querySelector("#submit");
+const inputs = form?.querySelectorAll("input");
+inputs?.forEach((input) => {
+    if (input.id == "submit")
+        return;
+    input.addEventListener("keyup", (e) => {
+        e.target.value += e.target.textContent;
+        console.log(e.target.value);
+    });
+});
+const validateFormInput = (input) => {
+    return input.value.length > 0;
+};
+submitBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    let newItem = {};
+    inputs?.forEach((input) => {
+        if (input.id == "submit")
+            return;
+        if (input.value.length == 0) {
+            alert(`Field "${input.id}" is empty...\nAll fields are required to be filled.`);
+            return;
+        }
+        console.log(input.value);
+    });
+});
 const toTitlecase = (str) => {
     const newStr = str.toString();
     return `${newStr.slice(0, 1).toUpperCase()}${newStr.slice(1)}`;
