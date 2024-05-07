@@ -11,14 +11,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-app;
+initializeApp(firebaseConfig);
 const db = getFirestore();
-
-
-// const standardVarer = await getDocs(collection(db, "standardVarer"));
-// const ukesMeny = await getDocs(collection(db, "ukesMeny"));
-
 
 export const getUkesMeny = async () => {
         return await getDocs(collection(db, "ukesMeny"));
